@@ -154,7 +154,7 @@ void transmit(void)
  * FUNCTION:   void main(void)
  * PURPOSE:    Main.
  ******************************************************************************/
-void main(void)
+int main(void)
 {
     init();
     
@@ -167,7 +167,7 @@ void main(void)
 
     /* show power up via LED on for 2 seconds */
  //   LED1_On();
-    __delay_32(200000);
+    __delay32(200000);
     // LED1_Off();
 
     #ifdef MODE_RECEIVER
@@ -192,7 +192,7 @@ void main(void)
         receive();
         
       //  LED2_On();
-        __delay_32(20000);
+        __delay32(20000);
       //  LED2_Off();
         #endif
     }
