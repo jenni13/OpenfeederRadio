@@ -1,18 +1,34 @@
-/* 
- * File:   main.c
- * Author: jenni
- *
- * Created on January 29, 2019, 1:56 PM
+
+/**
+  Section: Included Files
  */
 
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <time.h>
+#include <xc.h>
 
-/*
- * 
- */
-int main(int argc, char** argv) {
+#include "driver/driver.h"
+#include "debug/debug.h"
 
-    return (EXIT_SUCCESS);
+#include "Test/test.h"
+
+int main(void) {
+    // initialize the device
+    SYSTEM_Initialize();
+    init_driver();
+    __delay32(50000);
+    
+    test_state_register();
+    
+    __delay32(100000000);
+
+    while (1) {
+
+    }
+
+    return 1;
 }
-
