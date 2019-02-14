@@ -9,21 +9,21 @@
  */
 void test_state_register() {
 
-    uint16_t state_reg;
-   read_sr(&state_reg);
-    __delay32(100000);
-    
-   read_sr(&state_reg);
-    __delay32(100000);
+    uint16_t state_reg = ecrire_reg(0x0000);
+    __delay32(PITCH_TRANS);
+
+    state_reg = ecrire_reg(0x0000);
+    __delay32(PITCH_TRANS);
     nRES_SetLow();
-    __delay32(100000);
+    __delay32(PITCH_TRANS);
     nRES_SetHigh();
-    __delay32(100000);
-    
-   read_sr(&state_reg);
+    __delay32(PITCH_TRANS);
+
+    state_reg = ecrire_reg(0x0000);
 }
 
 //simulation d'une horloge
+
 void test_clock_seal() {
 
     nRES_SetHigh();

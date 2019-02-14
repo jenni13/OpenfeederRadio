@@ -16,5 +16,7 @@ void getPinsInput(struct inputs_vals* o_v);
 void debugOutput(struct outputs_vals* o_v);
 void debugInput(struct inputs_vals* o_v);
 
+void debug_buffer(uint8_t* buffer, int size);
+
 #endif	/* DEBUG_H */
 
